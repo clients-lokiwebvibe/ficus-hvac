@@ -1,0 +1,246 @@
+:root {
+    --primary-color: #80C341;
+    --secondary-color: #FCE47F;
+    --accent-color: #001A33;
+    --text-color: #262626;
+    --background-color: #F9F9F9;
+    --transition-duration: 0.3s;
+}
+
+/* Base Styles */
+body {
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition-duration) ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Components */
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform var(--transition-duration) ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: var(--secondary-color);
+}
+
+.card {
+    background-color: white;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 20px;
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+}
+
+/* Sections */
+.hero {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 50px 0;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px 0;
+}
+
+.navbar {
+    background-color: #090128;
+    transition: background-color var(--transition-duration) ease;
+}
+
+.services-section {
+    background-color: var(--accent-color);
+}
+
+/* Animations */
+.animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.zoom-in {
+    transform: scale(0.8);
+    transition: transform var(--transition-duration) ease;
+}
+
+.zoom-in.visible {
+    transform: scale(1);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all var(--transition-duration) ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-left {
+    transform: translateX(-50px);
+    transition: all 1s ease-in-out;
+}
+
+.fade-in-right {
+    transform: translateX(50px);
+    transition: all 1s ease-in-out;
+}
+
+/* Cards */
+.card-hover {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Images */
+img {
+    transition: transform var(--transition-duration) ease-in-out;
+}
+
+img:hover {
+    transform: scale(0.9);
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: -60px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    opacity: 0;
+    cursor: pointer;
+    background-color: rgb(53, 171, 53);
+    border-radius: 35%;
+    align-items: center;
+    justify-content: center;
+    transition: bottom var(--transition-duration) ease, opacity var(--transition-duration) ease;
+}
+
+#backToTop.show {
+    bottom: 20px;
+    opacity: 1;
+}
+
+#backToTop i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a73e8, #87ceeb);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.fan {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.fan .blade {
+    position: absolute;
+    width: 60%;
+    height: 10%;
+    background: #0dcaf0;
+    border-radius: 5px;
+    transform-origin: center center;
+}
+
+.blade1 { transform: rotate(0deg); }
+.blade2 { transform: rotate(90deg); }
+.blade3 { transform: rotate(180deg); }
+.blade4 { transform: rotate(270deg); }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    animation: fade 1.5s infinite;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes fade {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+/* WhatsApp Button */
+#fixed {
+    position: fixed;
+    bottom: -1%;
+    left: -4%;
+    z-index: 1;
+}
+
+#fixed img {
+    width: 30%;
+    height: auto;
+    transition: transform var(--transition-duration) ease;
+}
