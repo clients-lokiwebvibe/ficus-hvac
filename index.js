@@ -11,7 +11,7 @@ const siteContent = {
     company: {
         name: "FICUS HVAC",
         tagline: "HVAC Solution Providers",
-        description: "FICUS HVAC delivers premium solutions for residential and commercial clients, ensuring year-round comfort with eco-friendly systems. A trusted partner for personalized HVAC services.",
+        description: "FICUS HVAC delivering premium solutions for residential and commercial clients, ensuring year-round comfort with eco-friendly systems. A trusted partner for personalized HVAC services.",
         establishedYear: 2024
     },
     whyChooseUs: [
